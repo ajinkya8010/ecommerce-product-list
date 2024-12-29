@@ -38,4 +38,10 @@
     justify-content: center;
     align-items: center;
   }
+
+  .left{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
   
