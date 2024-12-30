@@ -18,10 +18,19 @@ const ProductPage = () => {
 
   if (!product) return <div className="loading">Loading...</div>;
 
+  const cleanAndValidateImage = (image) => {
+    if (!image) return null;
+    const cleanedImage = image.replace(/[\[\]"]+/g, "").trim();
+  
+    return cleanedImage;
+  };
+
+  const imgUrl = cleanAndValidateImage(product.images[0]);
+
   return (
     <div className="product-page">
       <div className="product-img-container">
-        <img src={product.images[0]} alt={product.title} className="product-image" />
+        <img src={imgUrl} alt={product.title} className="product-image" />
       </div>
       <div className="product-details">
         <h2 className="product-title">{product.title}</h2>
