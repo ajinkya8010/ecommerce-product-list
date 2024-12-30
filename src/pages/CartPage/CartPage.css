@@ -30,4 +30,15 @@
     width: 50px;
     margin-left: 0.5rem;
   }
+
+  button{
+    margin-top: 33px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 40px;
+  }
   
