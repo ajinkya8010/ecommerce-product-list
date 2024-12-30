@@ -36,7 +36,7 @@ const CartPage = () => {
                     />
                   </p>
                 </div>
-                <button onClick={() => removeFromCart(item.id)}>Remove</button>
+                <button id="remove" onClick={() => removeFromCart(item.id)}>Remove</button>
               </div>
             ))}
           </div>

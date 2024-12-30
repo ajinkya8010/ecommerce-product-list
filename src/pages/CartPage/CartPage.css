@@ -31,8 +31,8 @@
     margin-left: 0.5rem;
   }
 
-  button{
-    margin-top: 33px;
+  #remove{
+    margin-top: 35px;
     background-color: #007bff;
     color: white;
     border: none;
