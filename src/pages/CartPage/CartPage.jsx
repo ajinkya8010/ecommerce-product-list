@@ -20,7 +20,7 @@ const CartPage = () => {
           <div className="cart-items">
             {cart.map((item) => (
               <div key={item.id} className="cart-item">
-                <img src={item.images[0]} alt={item.title} />
+                <img src={item.images[0].replace(/[\[\]"]+/g, "").trim()} alt={item.title} />
                 <div className="item-details">
                   <h3>{item.title}</h3>
                   <p>Price: ${item.price}</p>
