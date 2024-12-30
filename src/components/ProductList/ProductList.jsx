@@ -3,6 +3,7 @@ import "./ProductList.css";
 import ProductCard from "../ProductCard/ProductCard";
 
 const ProductList = ({ products, onAddToCart }) => {
+  
   return (
     <div className="product-list">
       {products.map((product) => (
