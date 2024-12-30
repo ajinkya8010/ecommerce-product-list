@@ -16,18 +16,25 @@ const ProductPage = () => {
     });
   }, [id]);
 
-  if (!product) return <div>Loading...</div>;
+  if (!product) return <div className="loading">Loading...</div>;
 
   return (
     <div className="product-page">
-      <img src={product.images[0]} alt={product.title} className="product-img" />
+      <div className="product-img-container">
+        <img src={product.images[0]} alt={product.title} className="product-image" />
+      </div>
       <div className="product-details">
-        <h2>{product.title}</h2>
-        <p>{product.description}</p>
-        <p>Category: {product.category.name}</p>
-        <p>Price: ${product.price}</p>
-        <p>Rating: {product.rating}</p>
-        <button onClick={() => addToCart(product)}>Add to Cart</button>
+        <h2 className="product-title">{product.title}</h2>
+        <p className="product-description">{product.description}</p>
+        <p className="product-category-label">
+          <strong>Category:</strong> {product.category.name}
+        </p>
+        <p className="product-price-label">
+          <strong>Price:</strong> ${product.price}
+        </p>
+        <button className="add-to-cart-btn" onClick={() => addToCart(product)}>
+          Add to Cart
+        </button>
       </div>
     </div>
   );
